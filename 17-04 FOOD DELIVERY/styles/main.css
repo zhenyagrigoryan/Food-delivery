@@ -1,0 +1,39 @@
+.main-header .navigation {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.main-header .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header {
+  border-bottom: 1px solid #9093A6;
+}
+.main-header .navigation {
+  padding: 10px 0;
+}
+.main-header .navigation .logo-container {
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.main-header .navigation .logo-container .yellow-text {
+  position: relative;
+}
+.main-header .navigation .logo-container .yellow-text::after {
+  content: "";
+  display: block;
+  width: 63px;
+  height: 13px;
+  background-color: #ffe145;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+}
+.main-header .navigation .button_container {
+  display: flex;
+  gap: 20px;
+}/*# sourceMappingURL=main.css.map */

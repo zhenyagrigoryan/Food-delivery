@@ -1,0 +1,41 @@
+@import './variables';
+@import './mixins';
+@import './placeholder';
+
+.main-header{
+    border-bottom: 1px solid $second-text;
+    .navigation{
+        @extend %container;
+        @extend %d-flex-jc-space;
+        padding: 10px 0;
+
+
+        .logo-container{
+            font-family: $logo-font;
+            text-transform: uppercase;
+            font-weight: 700;
+
+            .yellow-text {
+                position: relative;
+                // z-index: 10;
+            &::after{
+                content: '';
+                display: block;
+                width: 63px;
+                height: 13px;
+                background-color: $yellow-bright;
+                position: absolute;
+                top: 50%;
+                z-index: -1;
+
+
+            }
+         }
+        }
+
+        .button_container{
+            display: flex;
+            gap: 20px;
+        }
+    }
+}

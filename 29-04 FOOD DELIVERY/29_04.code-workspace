@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Desktop/29_04"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Food-delivery-main"
+	}
+}

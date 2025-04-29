@@ -1,0 +1,128 @@
+@import './variables';
+@import './placeholder';
+@import './mixins';
+
+
+body{
+    font-family: $main-font;;
+}
+
+.main-header{
+    border-bottom: 1px solid $border-color;
+    .navigation{
+        @extend %container;
+        @extend %d-flex-jc-space;
+        padding: 10px 0;
+
+
+        .logo-container{
+            font-family: $logo-font;
+            text-transform: uppercase;
+            font-weight: 700;
+            cursor: pointer;
+
+            a{
+                color: $black-color;
+            }
+
+            .yellow-text {
+                position: relative;
+                // z-index: 10;
+            &::after{
+                content: '';
+                display: block;
+                width: 63px;
+                height: 13px;
+                background-color: $yellow-bright;
+                position: absolute;
+                top: 50%;
+                z-index: -1;
+
+
+            }
+         }
+        }
+
+        .buttons-container{
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-button{
+            font-size: 14px;
+            color: $second-text;
+            font-weight: 700;
+            @extend %d-flex-center;
+        }
+        
+        .menu-icon-button{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+
+            img{
+                width: 24px;
+            }
+
+
+        }
+    }
+}
+
+.main-banner{
+    @extend %container;
+    @extend %d-flex-jc-space;
+
+    .banner-buttons{
+        @extend %d-flex-jc-space;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .yellow-border-btn{
+        @include button($yellow-border,transparent);
+        flex-direction: column;
+        gap:5px;
+        span {
+            font-size: 12px;
+            &:first-child{
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    h1{
+        font-size: 58px;
+        color: $header-color;
+        letter-spacing: 5px;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+}
+
+.list-container{
+    width: 60%;
+    padding-left: 1% 1% 1% 10%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    bottom: 20%;
+
+    ul{
+        @extend %d-flex-jc-space;
+        li{
+            flex-basis: 25%;
+            @extend %d-flex-center;
+            gap: 10px;
+            span{
+                font-size: 14px;
+                color: $button-text-color;
+                letter-spacing: 0.5px;
+                line-height: 24px;
+
+            }
+        }
+    }
+    
+}

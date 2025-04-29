@@ -1,0 +1,16 @@
+%container{
+    margin: 0 auto;
+    width: 80%;
+}
+
+%d-flex-jc-space{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%d-flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

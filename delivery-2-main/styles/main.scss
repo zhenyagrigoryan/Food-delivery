@@ -52,14 +52,14 @@ body {
             }
 
             .menu-icon-button {
-                box-shadow:$yellow-shadow;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 border-radius: 50%;
                 width: 48px;
                 height: 48px;
                 transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
                 &:hover {
-                    color: $yellow-bright;
+                    background-color: $yellow-bright;
                     transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
                 }
             }
@@ -90,9 +90,9 @@ body {
 .list-container {
     width: 60%;
     padding: 1% 1% 1% 10%;
-    box-shadow: $menu-shadow;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: absolute;
-    bottom: 12%;
+    bottom: 20%;
     ul {
         @extend %d-flex-jc-space;
         li {
@@ -154,58 +154,4 @@ body {
 
 .carousel-item {
     width: 400px;
-}
-
-.grey-bg{
-    background-color: $grey-bg
-}
-.form-section{
-    @extend %container;
-    @extend %d-flex-jc-space;
-    padding: 40px 0;
-    color: $button-text-color;
-
-    p{
-        font-size: 16px;
-    }
-
-    form{
-        position: relative;
-        @extend %d-flex-center;
-        gap: 5px;
-    }
-    .input{
-        box-shadow: 0px 8px 40px 0px #00000014;
-        height: 72px;
-        width: 336px;
-        padding: 0 15px 0 50px;
-        background-color: $white;
-        &::placeholder{
-            font-family: $main-font;
-            color: $second-text;
-        }
- 
-    }
-    .icon-container{
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-        left: 15px;
-        &:hover{
-            color: $yellow-bright;
-            transition:  all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-    }
-
-    .yellow-bg-button{
-        @include button(none, $yellow-bright);
-        width: 88px;
-        height: 72px;
-        color: $dark-yellow;
-        &:hover{
-            @include button($yellow-border, transparent);
-            transition:  all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-            color: $button-text-color;
-        }
-    }
 }

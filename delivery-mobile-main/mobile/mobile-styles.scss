@@ -1,0 +1,138 @@
+@import '../styles/variables';
+@import '../styles/placeholders';
+@import '../styles/mixins';
+
+body{
+    font-family: $main-font;
+}
+
+.logo-container {
+    font-family: $logo-font;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+
+    a {
+        color: $black-color;
+    }
+
+    .yellow-text {
+        position: relative;
+        // z-index: 10;
+        &::after {
+            content: '';
+            display: block;
+            width: 63px;
+            height: 13px;
+            background-color: $yellow-bright;
+            position: absolute;
+            top: 50%;
+            z-index: -1;
+        }
+     
+    }
+
+
+        }
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+    
+            .nav-button {
+                font-size: 14px;
+                color: $second-text;
+                font-weight: 700;
+                @extend %d-flex-center;
+            }
+    
+            .menu-icon-button {
+                box-shadow: $menu-shadow;
+                border-radius: 50%;
+                width: 48px;
+                height: 48px;
+                transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+                &:hover {
+                    box-shadow: $yellow-shadow;
+                    color: $yellow-bright;
+                    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                }
+    
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+    }
+}
+
+.navigation, .main-banner{
+    padding:10px;
+    @extend %d-flex-jc-space;
+    @media screen and(min-width: $tablet-min-width){
+        padding: 10px 30px;
+    }
+
+    @media screen and (min-width:$desktop-min-width){
+        margin: 0 auto;
+        width: 80%;
+        padding: 10px 0;
+    }
+}
+
+.main-header{
+    border-bottom: 1px solid $border-color
+}
+
+.main-banner{
+    display: flex;
+    align-items: center;
+
+    h1 {
+        font-size: 20px;
+        color: $header-color;
+        letter-spacing: 5px;
+        font-weight: 700;
+        font-family: $secondary-font;
+
+
+        @media screen and (min-width:$tablet-min-width){
+            font-size: 36px;
+            
+        }
+        @media screen and (min-width:$desktop-min-width){
+            font-size: 56px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            
+        }
+        
+    }
+
+    .image-container{
+        flex: 0 1 auto;
+    }
+
+    .text-container{
+        flex: 1 0 50%;
+    }
+}
+
+.yellow-border-btn {
+    padding: 0 5px;
+    @include button($yellow-border, transparent);
+    flex-direction: column;
+    gap: 3px;
+    span {
+        font-size: 12px;
+        &:first-child {
+            font-size: 13px;
+            font-weight: 700;
+        }
+    }
+}
+
+.banner-buttons {
+    @extend %d-flex-jc-space;
+    justify-content: flex-start;
+    gap: 15px;
+}
